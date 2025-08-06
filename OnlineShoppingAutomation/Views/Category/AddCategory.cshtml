@@ -1,0 +1,15 @@
+﻿@model OnlineShoppingAutomation.Models.Classes.Category
+@{
+    ViewBag.Title = "AddCategory";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br/>
+<h2>Adding a New Category</h2>
+<br />
+<form class="form-group" method="post">
+    <label>Category Name</label>
+    @Html.TextBoxFor(x=>x.CatagoryName, new {@class="form-control"})
+    <br/>
+    <button class="btn btn-info">Save</button>
+</form>

@@ -1,0 +1,20 @@
+﻿@model OnlineShoppingAutomation.Models.Classes.Category
+@{
+    ViewBag.Title = "UpdateCategory";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<h2>Updating Category</h2>
+<br />
+@using (Html.BeginForm("UpdateCategory", "Category", FormMethod.Post))
+{
+    <div class="form-group">
+        <label>Category Name</label>
+        @Html.TextBoxFor(x => x.CatagoryName, new { @class = "form-control" })
+        @Html.HiddenFor(x => x.CatagoryId)
+    </div>
+
+
+    <button type="submit" class="btn btn-success">Update</button>
+}
+
