@@ -17,5 +17,9 @@ namespace OnlineShoppingAutomation.Models.Classes
         public decimal SellPrice { get; set; }
         public bool Status { get; set; }
         public string ProductImage { get; set; }
+        public Catagory Catagory { get; set; }
+        public SalesLog SalesLog { get; set; }
+
+
     }
 }

@@ -13,5 +13,8 @@ namespace OnlineShoppingAutomation.Models.Classes
         public string EmployeeName { get; set; }
         public string EmployeeSurname { get; set; }
         public string EmployeeImage { get; set; }
+
+        public SalesLog SalesLog { get; set; }
+        public Department Department { get; set; }
     }
 }

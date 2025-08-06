@@ -11,5 +11,7 @@ namespace OnlineShoppingAutomation.Models.Classes
         [Key]
         public int CatagoryId { get; set; }
         public string CatagoryName { get; set; }
+        public ICollection<Product> Products { get; set; }
+
     }
 }

@@ -14,5 +14,7 @@ namespace OnlineShoppingAutomation.Models.Classes
         public string SellerSurname { get; set; }
         public string SellerCity { get; set; }
         public string SellerMail { get; set; }
+
+        public SalesLog SalesLog { get; set; }
     }
 }

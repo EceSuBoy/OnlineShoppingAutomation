@@ -15,5 +15,7 @@ namespace OnlineShoppingAutomation.Models.Classes
         public DateTime Hour { get; set; }
         public string Deliverer { get; set; }
         public string Recipient { get; set; }
+        public ICollection<InvoiceItem> InvoiceItems { get; set; }
+
     }
 }

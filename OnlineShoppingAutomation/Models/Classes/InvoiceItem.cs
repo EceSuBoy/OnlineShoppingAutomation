@@ -14,5 +14,6 @@ namespace OnlineShoppingAutomation.Models.Classes
         public int Amount { get; set; }
         public decimal UnitPrice { get; set; }
         public decimal SumPrice { get; set; }
+        public Bill Bill { get; set; }
     }
 }
