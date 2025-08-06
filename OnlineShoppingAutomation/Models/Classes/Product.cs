@@ -24,10 +24,12 @@ namespace OnlineShoppingAutomation.Models.Classes
         public decimal PurchasePrice { get; set; }
         public decimal SellPrice { get; set; }
         public bool Status { get; set; }
-        public string ProductImage { get; set; }
-        public Catagory Catagory { get; set; }
-        public SalesLog SalesLog { get; set; }
 
+        [Column(TypeName = "Varchar")]
+        [StringLength(300)]
+        public string ProductImage { get; set; }
+        public Category Catagory { get; set; }
+        public ICollection<SalesLog> SalesLogs { get; set; }
 
     }
 }

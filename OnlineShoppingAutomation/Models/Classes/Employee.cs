@@ -21,7 +21,7 @@ namespace OnlineShoppingAutomation.Models.Classes
         [Column(TypeName = "Varchar")]
         [StringLength(300)]
 
-        public SalesLog SalesLog { get; set; }
+        public ICollection<SalesLog> SalesLogs { get; set; }
         public Department Department { get; set; }
     }
 }

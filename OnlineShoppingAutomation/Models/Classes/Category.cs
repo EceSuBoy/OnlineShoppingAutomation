@@ -7,7 +7,7 @@ using System.Web;
 
 namespace OnlineShoppingAutomation.Models.Classes
 {
-    public class Catagory
+    public class Category
     {
         [Key]
         public int CatagoryId { get; set; }

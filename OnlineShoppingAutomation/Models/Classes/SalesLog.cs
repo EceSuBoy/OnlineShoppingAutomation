@@ -10,16 +10,13 @@ namespace OnlineShoppingAutomation.Models.Classes
     {
         [Key]
         public int SalesId { get; set; }
-        //Product
-        //Seller
-        //Employee
         public DateTime Date { get; set; }
         public int Amount { get; set; }
         public decimal Price { get; set; }
         public decimal TotalSum { get; set; }
-        public ICollection<Product> Products { get; set; }
-        public ICollection<Seller> Sellers { get; set; }
-        public ICollection<Employee> Employees { get; set; }
+        public Product Product { get; set; }
+        public Seller Seller { get; set; }
+        public Employee Employee { get; set; }
 
     }
 }

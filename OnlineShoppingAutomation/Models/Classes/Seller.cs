@@ -25,6 +25,6 @@ namespace OnlineShoppingAutomation.Models.Classes
         [StringLength(50)]
         public string SellerMail { get; set; }
 
-        public SalesLog SalesLog { get; set; }
+        public ICollection<SalesLog> SalesLogs { get; set; }
     }
 }
