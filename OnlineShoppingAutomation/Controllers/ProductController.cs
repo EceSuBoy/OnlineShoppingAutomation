@@ -18,6 +18,13 @@ namespace OnlineShoppingAutomation.Controllers
         }
         public ActionResult AddProduct()
         {
+            List<SelectListItem> deger1 = (from x in c.Categories.ToList() select new SelectListItem
+            {
+                Text=x.CategoryName,
+                Value=x.CategoryId.ToString()
+            }).ToList();
+            
+            ViewBag.dgr1 = deger1;
             return View();
         }
         [HttpPost]

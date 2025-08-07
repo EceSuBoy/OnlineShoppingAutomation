@@ -17,6 +17,7 @@
         <th>Category</th>
         <th>Image</th>
         <th>Delete</th>
+        <th>Update</th>
 
     </tr>
     @foreach (var u in Model)
@@ -32,6 +33,10 @@
             <td>@u.ProductImage</td>
             <td>
                 <a href="/Product/DeleteProduct/@u.ProductId" class="btn btn-danger">Delete</a>
+            </td>
+
+            <td>
+                <a href="/Product/UpdateProduct/@u.ProductId" class="btn btn-warning">Update</a>
             </td>
         </tr>
     }
