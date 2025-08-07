@@ -13,7 +13,7 @@ namespace OnlineShoppingAutomation.Controllers
         // GET: Product
         public ActionResult Index()
         {
-            var urunler = c.Products.ToList();
+            var urunler = c.Products.Where(x=>x.Status==true).ToList();
             return View(urunler);
         }
         public ActionResult AddProduct()
