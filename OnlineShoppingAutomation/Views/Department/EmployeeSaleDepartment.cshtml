@@ -1,0 +1,38 @@
+﻿@using OnlineShoppingAutomation.Models.Classes
+@model List<SalesLog>
+@{
+    ViewBag.Title = "EmployeeSaleDepartment";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h2>Employee Sales Page</h2>
+<br />
+<ol class="breadcrumb" mb-4>
+    <li class="breadcrumb-item active">Employee Name: @ViewBag.dpers</li>
+</ol>
+<table class="table table-condensed">
+    <tr>
+        <th>Sales ID</th>
+        <th>Product</th>
+        <th>Seller</th>
+        <th>Price</th>
+        <th>Amount</th>
+        <th>Total Price</th>
+        <th>Date</th>
+        <th>Print</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.SalesId</td>
+            <td>@x.Product.ProductName</td>
+            <td>@x.Seller.SellerName @x.Seller.SellerSurname</td>
+            <td>@x.Price</td>
+            <td>@x.Amount</td>
+            <td>@x.TotalSum</td>
+            <td>@x.Date</td>
+            <td><a href="#" class="btn btn-default" style="background-color:dodgerblue">Print</a></td>
+        </tr>
+    }
+</table>

@@ -14,9 +14,13 @@ namespace OnlineShoppingAutomation.Models.Classes
         public int Amount { get; set; }
         public decimal Price { get; set; }
         public decimal TotalSum { get; set; }
-        public Product Product { get; set; }
-        public Seller Seller { get; set; }
-        public Employee Employee { get; set; }
+        public int Productid { get; set; }
+        public int Sellerid { get; set; }
+        public int Employeeid { get; set; }
+
+        public virtual Product Product { get; set; }
+        public virtual Seller Seller { get; set; }
+        public virtual Employee Employee { get; set; }
 
     }
 }

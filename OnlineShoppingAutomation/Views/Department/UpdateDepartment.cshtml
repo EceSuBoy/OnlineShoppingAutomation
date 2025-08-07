@@ -1,0 +1,23 @@
+﻿@model OnlineShoppingAutomation.Models.Classes.Department
+@{
+    ViewBag.Title = "UpdateDepartment";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h2>Updating Department</h2>
+<br />
+@using (Html.BeginForm("UpdateDepartment", "Department", FormMethod.Post))
+{
+    <div class="form-group">
+        <label>Department Name</label>
+        @Html.TextBoxFor(x => x.DepartmentName, new { @class = "form-control" })
+        @Html.HiddenFor(x => x.DepartmentId)
+    </div>
+
+
+    <button type="submit" class="btn btn-default" style="background-color:yellowgreen">Update</button>
+}
+
+
+

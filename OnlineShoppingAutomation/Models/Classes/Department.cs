@@ -14,6 +14,7 @@ namespace OnlineShoppingAutomation.Models.Classes
         [Column(TypeName = "Varchar")]
         [StringLength(50)]
         public string DepartmentName { get; set; }
+        public bool State { get; set; }
         public ICollection<Employee> Employees { get; set; }
     }
 }

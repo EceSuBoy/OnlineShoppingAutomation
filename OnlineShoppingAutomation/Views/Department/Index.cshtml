@@ -1,0 +1,32 @@
+﻿@using OnlineShoppingAutomation.Models.Classes
+@model List<Department>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<table class="table table-bordered" style="margin-top:20px">
+    <tr>
+        <th>ID</th>
+        <th>Departmant Name</th>
+        <th>Delete</th>
+        <th>Update</th>
+        <th>Details</th>
+    </tr>
+
+    @foreach (var k in Model)
+    {
+        <tr>
+            <td>@k.DepartmentId</td>
+            <td>@k.DepartmentName</td>
+
+            <td><a href="/Department/DeleteDepartment/@k.DepartmentId/" method="post" class="btn btn-danger">Delete</a></td>
+            <td><a href="/Department/UpdateDepartment/@k.DepartmentId/" method="post" class="btn btn-warning">Update</a></td>
+            <td><a href="/Department/DetailDepartment/@k.DepartmentId/" method="post" class="btn btn-default" style="background-color:lightcoral; color:white;">Details</a></td>
+
+        </tr>
+    }
+</table>
+<a href="/Department/AddDepartment/" class="btn btn-info">Add Department</a>
+

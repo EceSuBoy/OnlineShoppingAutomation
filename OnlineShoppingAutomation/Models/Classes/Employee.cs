@@ -22,6 +22,7 @@ namespace OnlineShoppingAutomation.Models.Classes
         [StringLength(300)]
 
         public ICollection<SalesLog> SalesLogs { get; set; }
-        public Department Department { get; set; }
+        public int Departmentid { get; set; }
+        public virtual Department Department { get; set; }
     }
 }
