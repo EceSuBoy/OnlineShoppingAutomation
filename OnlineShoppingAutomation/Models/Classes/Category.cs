@@ -10,10 +10,10 @@ namespace OnlineShoppingAutomation.Models.Classes
     public class Category
     {
         [Key]
-        public int CatagoryId { get; set; }
+        public int CategoryId { get; set; }
         [Column(TypeName = "Varchar")]
         [StringLength(40)]
-        public string CatagoryName { get; set; }
+        public string CategoryName { get; set; }
         public ICollection<Product> Products { get; set; }
 
     }

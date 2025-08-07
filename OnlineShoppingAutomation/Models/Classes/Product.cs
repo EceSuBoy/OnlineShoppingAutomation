@@ -28,7 +28,8 @@ namespace OnlineShoppingAutomation.Models.Classes
         [Column(TypeName = "Varchar")]
         [StringLength(300)]
         public string ProductImage { get; set; }
-        public Category Catagory { get; set; }
+        public int Categoryid { get; set; }
+        public virtual Category Category { get; set; }
         public ICollection<SalesLog> SalesLogs { get; set; }
 
     }

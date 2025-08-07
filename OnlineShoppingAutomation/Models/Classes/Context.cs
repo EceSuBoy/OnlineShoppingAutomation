@@ -16,7 +16,7 @@ namespace OnlineShoppingAutomation.Models.Classes
         public DbSet<InvoiceItem> InvoiceItems { get; set; }
         public DbSet<Bill> Bills { get; set; }
         public DbSet<Expense> Expenses { get; set; }
-        public DbSet<Category> Categorys { get; set; }
+        public DbSet<Category> Categories { get; set; }
         public DbSet<Employee> Employees { get; set; }
         public DbSet<SalesLog> SalesLogs { get; set; }
         public DbSet<Product> Products { get; set; }

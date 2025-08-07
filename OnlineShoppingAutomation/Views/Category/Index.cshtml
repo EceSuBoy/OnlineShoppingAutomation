@@ -12,14 +12,15 @@
         <th>Delete</th>
         <th>Update</th>
     </tr>
+
     @foreach (var k in Model)
     {
         <tr>
-            <td>@k.CatagoryId</td>
-            <td>@k.CatagoryName</td>
+            <td>@k.CategoryId</td>
+            <td>@k.CategoryName</td>
 
-            <td><a href="/Category/DeleteCategory/@k.CatagoryId/" method="post" class="btn btn-danger">Delete</a></td>
-            <td><a href="/Category/UpdateCategory/@k.CatagoryId/" method="post" class="btn btn-warning">Update</a></td>
+            <td><a href="/Category/DeleteCategory/@k.CategoryId/" method="post" class="btn btn-danger">Delete</a></td>
+            <td><a href="/Category/UpdateCategory/@k.CategoryId/" method="post" class="btn btn-warning">Update</a></td>
         </tr>
     }
 </table>
