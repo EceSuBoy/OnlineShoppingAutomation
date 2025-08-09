@@ -13,10 +13,11 @@ namespace OnlineShoppingAutomation.Models.Classes
         public int SellerId { get; set; }
 
         [Column(TypeName = "Varchar")]
-        [StringLength(30)]
+        [StringLength(30, ErrorMessage ="You can enter max 30 characters.")]
         public string SellerName { get; set; }
         [Column(TypeName = "Varchar")]
         [StringLength(30)]
+        [Required(ErrorMessage ="You must fill this field.")]
         public string SellerSurname { get; set; }
         [Column(TypeName = "Varchar")]
         [StringLength(30)]
@@ -25,6 +26,7 @@ namespace OnlineShoppingAutomation.Models.Classes
         [StringLength(50)]
         public string SellerMail { get; set; }
 
+        public bool Status { get; set; }
         public ICollection<SalesLog> SalesLogs { get; set; }
     }
 }

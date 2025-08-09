@@ -1,0 +1,36 @@
+﻿@model OnlineShoppingAutomation.Models.Classes.Seller
+
+@{
+    ViewBag.Title = "UpdateSeller";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<h2>Updating Seller Page</h2>
+<br />
+@using (Html.BeginForm("UpdateSeller", "Seller", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.HiddenFor(x => x.SellerId)
+
+        <label>Seller Name</label>
+        @Html.TextBoxFor(x => x.SellerName, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.SellerName, "", new { @style = "color:red" })
+        <br />
+
+        <label>Seller Surname</label>
+        @Html.TextBoxFor(x => x.SellerSurname, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.SellerSurname, "", new { @style = "color:red" })
+        <br />
+
+        <label>Seller City</label>
+        @Html.TextBoxFor(x => x.SellerCity, new { @class = "form-control" })
+        <br />
+
+        <label>Seller Mail</label>
+        @Html.TextBoxFor(x => x.SellerMail, new { @class = "form-control" })
+        <br />
+
+        <button class="btn btn-default" style="background-color:khaki">Update</button>
+    </div>
+}
+

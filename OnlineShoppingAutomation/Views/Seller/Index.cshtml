@@ -1,0 +1,35 @@
+﻿@using OnlineShoppingAutomation.Models.Classes
+@model List<Seller>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<table class="table table-striped">
+    <tr>
+        <th>Seller ID</th>
+        <th>Name</th>
+        <th>Surname</th>
+        <th>City</th>
+        <th>Mail</th>
+        <th>Delete</th>
+        <th>Update</th>
+        <th>Details</th>
+    </tr>
+    @foreach(var x in Model)
+            {
+                <tr>
+                    <td>@x.SellerId</td>
+                    <td>@x.SellerName</td>
+                    <td>@x.SellerSurname</td>
+                    <td>@x.SellerCity</td>
+                    <td>@x.SellerMail</td>
+                    <td><a href="/Seller/DeleteSeller/@x.SellerId" class="btn btn-danger">Delete</a></td>
+                    <td><a href="/Seller/UpdateSeller/@x.SellerId" class="btn btn-warning">Update</a></td>
+                    <td><a href="/Seller/ClientSales/@x.SellerId/" method="post" class="btn btn-default" style="background-color:lightcoral; color:white;">Sales Breakdown</a></td>
+
+                </tr>
+            }
+</table>
+<a href="/Seller/AddSeller/" class="btn btn-info">New Seller</a>

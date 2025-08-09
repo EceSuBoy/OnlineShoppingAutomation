@@ -1,0 +1,30 @@
+﻿@model OnlineShoppingAutomation.Models.Classes.Seller
+
+@{
+    ViewBag.Title = "AddSeller";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h2>Adding a New Seller</h2>
+<br />
+<form class="form-group" method="post">
+    <label>Seller Name</label>
+    @Html.TextBoxFor(x => x.SellerName, new { @class = "form-control" })
+    <br />
+
+    <label>Seller Surname</label>
+    @Html.TextBoxFor(x => x.SellerSurname, new { @class = "form-control" })
+    <br />
+
+    <label>Seller City</label>
+    @Html.TextBoxFor(x => x.SellerCity, new { @class = "form-control" })
+    <br />
+
+    <label>Seller Mail</label>
+    @Html.TextBoxFor(x => x.SellerMail, new { @class = "form-control" })
+    <br />
+
+    <button class="btn btn-info">Save</button>
+</form>
+
