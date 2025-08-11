@@ -71,6 +71,11 @@ namespace OnlineShoppingAutomation.Controllers
             return RedirectToAction("Index");
 
         }
+        public ActionResult ProductList()
+        {
+            var degerler = c.Products.ToList();
+            return View(degerler);
+        }
     }
     
 }

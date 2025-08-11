@@ -1,0 +1,54 @@
+﻿@using OnlineShoppingAutomation.Models.Classes
+@model List<SalesLog>
+@{
+    ViewBag.Title = "DetailSales";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<h2>Sales Details</h2>
+<br />
+
+<table id="tbl1" class="table table-condensed">
+    <tr>
+        <th>Sales ID</th>
+        <th>Product</th>
+        <th>Seller</th>
+        <th>Employee</th>
+        <th>Price</th>
+        <th>Amount</th>
+        <th>Total Price</th>
+        <th>Date</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.SalesId</td>
+            <td>@x.Product.ProductName</td>
+            <td>@x.Seller.SellerName @x.Seller.SellerSurname</td>
+            <td>@x.Employee.EmployeeName @x.Employee.EmployeeSurname</td>
+            <td>@x.Price</td>
+            <td>@x.Amount</td>
+            <td>@x.TotalSum</td>
+            <td>@x.Date</td>
+        </tr>
+    }
+</table>
+<button class="btn btn-default" style="background-color:dodgerblue">Print</button>
+
+
+
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+
+
+
+<link href="https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css" rel="stylesheet" />
+<link href="https://cdn.datatables.net/responsive/2.1.1/css/responsive.bootstrap.min.css" rel="stylesheet" />
+<script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.15/js/dataTables.bootstrap4.min.js "></script>
+
+<script>
+    $('#tbl1').dataTable({});
+</script>

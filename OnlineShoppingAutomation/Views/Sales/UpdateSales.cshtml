@@ -1,0 +1,45 @@
+﻿@model OnlineShoppingAutomation.Models.Classes.SalesLog
+
+@{
+    ViewBag.Title = "UpdateSales";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h2>Updating a Sale</h2>
+<br />
+
+@using (Html.BeginForm("UpdateSales", "Sales", FormMethod.Post))
+{
+
+    @Html.HiddenFor(x => x.SalesId)
+    <label>Product</label>
+    @Html.DropDownListFor(x => x.Productid, (List<SelectListItem>)ViewBag.dgr1, new { @class = "form-control" })
+
+    <label>Seller</label>
+    @Html.DropDownListFor(x => x.Sellerid, (List<SelectListItem>)ViewBag.dgr2, new { @class = "form-control" })
+
+    <label>Employee</label>
+    @Html.DropDownListFor(x => x.Employeeid, (List<SelectListItem>)ViewBag.dgr3, new { @class = "form-control" })
+
+
+    <label>Amount</label>
+    @Html.TextBoxFor(x => x.Amount, new { @class = "form-control" })
+
+    <label>Price</label>
+    @Html.TextBoxFor(x => x.Price, new { @class = "form-control" })
+
+    <label>Total Sum</label>
+    @Html.TextBoxFor(x => x.TotalSum, new { @class = "form-control" })
+
+    @*@Html.TextBoxFor(x => x.Categoryid, new { @class = "form-control" })*@
+
+    <label>Date</label>
+    @Html.TextBoxFor(x => x.Date, new { @class = "form-control" })
+
+
+    <br />
+    <button class="btn btn-primary">Save</button>
+
+}
+
