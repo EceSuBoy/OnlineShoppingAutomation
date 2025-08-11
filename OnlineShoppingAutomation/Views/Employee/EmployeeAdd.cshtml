@@ -1,0 +1,27 @@
+﻿@model OnlineShoppingAutomation.Models.Classes.Employee
+@{
+    ViewBag.Title = "EmployeeAdd";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h2>Adding a Employee Page</h2>
+<br />
+<form class="form-group" method="post">
+    <label>Employee Name</label>
+    @Html.TextBoxFor(x => x.EmployeeName, new { @class = "form-control" })
+
+    <label>Employee Surname</label>
+    @Html.TextBoxFor(x => x.EmployeeSurname, new { @class = "form-control" })
+
+    <label>Image</label>
+    @Html.TextBoxFor(x => x.EmployeeImage, new { @class = "form-control" })
+
+    <label>Department</label>
+    @Html.DropDownListFor(x => x.Departmentid, (List<SelectListItem>)ViewBag.dgr1, new { @class = "form-control" })
+    @*@Html.TextBoxFor(x => x.Categoryid, new { @class = "form-control" })*@
+    <br />
+    <button class="btn btn-primary">Add</button>
+
+</form>
+

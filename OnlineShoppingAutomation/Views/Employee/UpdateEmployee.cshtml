@@ -1,0 +1,34 @@
+﻿@model OnlineShoppingAutomation.Models.Classes.Employee
+@{
+    ViewBag.Title = "UpdateEmployee";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h2>Updating Employee Page</h2>
+<br />
+@using (Html.BeginForm("UpdateEmployee", "Employee", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.HiddenFor(x => x.EmployeeId)
+
+        <label>Employee Name</label>
+        @Html.TextBoxFor(x => x.EmployeeName, new { @class = "form-control" })
+        <br />
+
+        <label>Employee Surname</label>
+        @Html.TextBoxFor(x => x.EmployeeSurname, new { @class = "form-control" })
+        <br />
+
+        <label>Employee Image</label>
+        @Html.TextBoxFor(x => x.EmployeeImage, new { @class = "form-control" })
+        <br />
+
+        <label>Department</label>
+        @Html.DropDownListFor(x => x.Departmentid, (List<SelectListItem>)ViewBag.dgr1, new { @class = "form-control" })
+        <br />
+
+        <button class="btn btn-default" style="background-color:khaki">Update</button>
+    </div>
+}
+
