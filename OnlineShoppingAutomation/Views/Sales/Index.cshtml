@@ -1,0 +1,43 @@
+﻿@using OnlineShoppingAutomation.Models.Classes
+@model List<SalesLog>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<table class="table table-bordered" style="margin-top:20px">
+    <tr>
+        <th>ID</th>
+        <th>Product</th>
+        <th>Seller</th>
+        <th>Employee</th>
+        <th>Amount</th>
+        <th>Price</th>
+        <th>Sum</th>
+        <th>Date</th>
+        <th>Update</th>
+        <th>Details</th>
+    </tr>
+
+    @foreach (var k in Model)
+    {
+        <tr>
+            <td>@k.SalesId</td>
+            <td>@k.Product.ProductName</td>
+            <td>@k.Seller.SellerName @k.Seller.SellerSurname</td>
+            <td>@k.Employee.EmployeeName @k.Employee.EmployeeSurname</td>
+            <td>@k.Amount</td>
+            <td>@k.Price</td>
+            <td>@k.TotalSum</td>
+            <td>@k.Date</td>
+
+            <td><a href="/Employee/UpdateEmployee/@k.SalesId/" method="post" class="btn btn-warning">Update</a></td>
+            <td><a href="/Department/EmployeeSaleDepartment/@k.SalesId/" method="post" class="btn btn-default" style="background-color:lightcoral; color:white;">Details</a></td>
+
+        </tr>
+    }
+</table>
+<a href="/Sales/AddSales/" class="btn btn-info">Make a New Sale</a>
+
+
