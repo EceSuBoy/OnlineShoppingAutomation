@@ -1,0 +1,46 @@
+﻿@using OnlineShoppingAutomation.Models.Classes
+@model List<Bill>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<table class="table table-bordered" style="margin-top:20px">
+    <tr>
+        <th>ID</th>
+        <th>Serial No</th>
+        <th>Item No</th>
+        <th>TaxOffice</th>
+        <th>Date</th>
+        <th>Hour</th>
+        <th>Deliverer</th>
+        <th>Recipient</th>
+        <th>Total</th>
+        <th>Update</th>
+        <th>Details</th>
+
+    </tr>
+
+    @foreach (var k in Model)
+    {
+        <tr>
+            <td>@k.BillId</td>
+            <td>@k.BillSerialNo</td>
+            <td>@k.BillItemNo</td>
+            <td>@k.TaxOffice</td>
+            <td>@k.Date</td>
+            <td>@k.Hour</td>
+            <td>@k.Deliverer</td>
+            <td>@k.Recipient</td>
+            <td>@k.Sum</td>
+
+            <td><a href="/Bill/UpdateBill/@k.BillId/" method="post" class="btn btn-warning">Update</a></td>
+            <td><a href="/Bill/DetailBill/@k.BillId/" method="post" class="btn btn-default" style="background-color:lightcoral; color:white;">Details</a></td>
+
+        </tr>
+    }
+</table>
+<br />
+<a href="/Bill/AddBill/" class="btn btn-info">Add new Bill</a>
+
+

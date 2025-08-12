@@ -1,0 +1,36 @@
+﻿@using OnlineShoppingAutomation.Models.Classes
+@model List<InvoiceItem>
+@{
+    ViewBag.Title = "DetailBill";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h2>Bill Details Page</h2>
+<br />
+<ol class="breadcrumb" mb-4>
+    <li class="breadcrumb-item active"></li>
+</ol>
+
+<table class="table table-hover">
+    <tr>
+        <th>ID</th>
+        <th>Description</th>
+        <th>Amount</th>
+        <th>Unit Price</th>
+        <th>Sum</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.InvoiceItemId</td>
+            <td>@x.Description</td>
+            <td>@x.Amount</td>
+            <td>@x.UnitPrice</td>
+            <td>@x.SumPrice</td>
+        </tr>
+    }
+</table>
+
+<a href="/Bill/AddInvoice/" class="btn btn-default" style="background-color:darksalmon">New Invoice Item</a> 
+

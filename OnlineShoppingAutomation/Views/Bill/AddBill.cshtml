@@ -1,0 +1,37 @@
+﻿@model OnlineShoppingAutomation.Models.Classes.Bill
+
+@{
+    ViewBag.Title = "AddBill";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h2>Adding a Bill Page</h2>
+<br />
+<form class="form-group" method="post">
+    <label>Bill Serial No</label>
+    @Html.TextBoxFor(x => x.BillSerialNo, new { @class = "form-control" })
+
+    <label>Bill Item No</label>
+    @Html.TextBoxFor(x => x.BillItemNo, new { @class = "form-control" })
+
+    <label>Date</label>
+    @Html.TextBoxFor(x => x.Date, new { @class = "form-control" })
+
+    <label>Hour</label>
+    @Html.TextBoxFor(x => x.Hour, new { @class = "form-control" })
+
+    <label>Tax Office</label>
+    @Html.TextBoxFor(x => x.TaxOffice, new { @class = "form-control" })
+
+    <label>Deliverer</label>
+    @Html.TextBoxFor(x => x.Deliverer, new { @class = "form-control" })
+
+    <label>Recipient</label>
+    @Html.TextBoxFor(x => x.Recipient, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-primary">Add</button>
+
+</form>
+
+

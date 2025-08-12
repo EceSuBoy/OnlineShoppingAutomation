@@ -1,0 +1,31 @@
+﻿@model OnlineShoppingAutomation.Models.Classes.InvoiceItem
+
+@{
+    ViewBag.Title = "AddInvoice";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h2>Adding a Bill Page</h2>
+<br />
+<form class="form-group" method="post">
+    <label>Description</label>
+    @Html.TextBoxFor(x => x.Description, new { @class = "form-control" })
+    <br />
+    <label>Amount</label>
+    @Html.TextBoxFor(x => x.Amount, new { @class = "form-control" })
+    <br />
+    <label>Unit Price</label>
+    @Html.TextBoxFor(x => x.UnitPrice, new { @class = "form-control" })
+    <br />
+    <label>Sum</label>
+    @Html.TextBoxFor(x => x.SumPrice, new { @class = "form-control" })
+    <br />
+    <label>Bill ID</label>
+    @Html.TextBoxFor(x => x.BillId, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-primary">Add</button>
+
+</form>
+
+

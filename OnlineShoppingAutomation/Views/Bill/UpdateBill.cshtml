@@ -1,0 +1,41 @@
+﻿@model OnlineShoppingAutomation.Models.Classes.Bill
+
+@{
+    ViewBag.Title = "UpdateBill";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h2>Updating Bill</h2>
+<br />
+
+@using (Html.BeginForm("UpdateBill", "Bill", FormMethod.Post))
+{
+
+    @Html.HiddenFor(x => x.BillId)
+    <label>Bill Serial No</label>
+    @Html.TextBoxFor(x => x.BillSerialNo, new { @class = "form-control" })
+    <br />
+    <label>Bill Item No</label>
+    @Html.TextBoxFor(x => x.BillItemNo, new { @class = "form-control" })
+    <br />
+    <label>Tax Office</label>
+    @Html.TextBoxFor(x => x.TaxOffice, new { @class = "form-control" })
+    <br />
+    <label>Date</label>
+    @Html.TextBoxFor(x => x.Date, new { @class = "form-control" })
+    <br />
+    <label>Hour</label>
+    @Html.TextBoxFor(x => x.Hour, new { @class = "form-control" })
+    <br />
+    <label>Deliverer</label>
+    @Html.TextBoxFor(x => x.Deliverer, new { @class = "form-control" })
+    <br />
+    <label>Recipient</label>
+    @Html.TextBoxFor(x => x.Recipient, new { @class = "form-control" })
+
+    <br />
+    <button class="btn btn-primary">Save</button>
+
+}
+

@@ -12,9 +12,9 @@ namespace OnlineShoppingAutomation.Models.Classes
         [Key]
         public int BillId { get; set; }
 
-        [Column(TypeName = "Char")]
+        [Column(TypeName = "char")]
         [StringLength(1)]
-        public char BillSerialNo { get; set; }
+        public string BillSerialNo { get; set; }
 
         [Column(TypeName = "Varchar")]
         [StringLength(6)]
@@ -24,13 +24,16 @@ namespace OnlineShoppingAutomation.Models.Classes
         [Column(TypeName = "Varchar")]
         [StringLength(60)]
         public string TaxOffice { get; set; }
-        public DateTime Hour { get; set; }
+        [Column(TypeName = "char")]
+        [StringLength(5)]
+        public string Hour { get; set; }
         [Column(TypeName = "Varchar")]
         [StringLength(30)]
         public string Deliverer { get; set; }
         [Column(TypeName = "Varchar")]
         [StringLength(30)]
         public string Recipient { get; set; }
+        public decimal Sum { get; set; }
         public ICollection<InvoiceItem> InvoiceItems { get; set; }
 
     }
