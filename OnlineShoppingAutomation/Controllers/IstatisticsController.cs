@@ -81,9 +81,26 @@ namespace OnlineShoppingAutomation.Controllers
             var deger15 = c.SalesLogs.Count(x => x.Date == DateTime.Today).ToString();
             ViewBag.d15 = deger15;
 
-            var deger16 = c.SalesLogs.Where(x => x.Date == DateTime.Today).Sum(x => x.TotalSum).ToString();
+            var deger16 = c.SalesLogs
+    .Where(x => x.Date == DateTime.Today)
+    .Select(x => x.TotalSum)
+    .DefaultIfEmpty(0) // Prevents exception if no rows match
+    .Sum()
+    .ToString();
+
             ViewBag.d16 = deger16;
+
             return View();
+        }
+        public ActionResult SimpleTables()
+        {
+            var sorgu = from x in c.Sellers group x by x.SellerCity into g
+                        select new GroupClass
+                        {
+                            City = g.Key,
+                            Count = g.Count()
+                        };
+            return View(sorgu.ToList());
         }
     }
 }

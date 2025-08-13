@@ -12,21 +12,21 @@
     <div class="form-group">
         @Html.HiddenFor(x => x.SellerId)
 
-        <label>Seller Name</label>
+        <label>Client Name</label>
         @Html.TextBoxFor(x => x.SellerName, new { @class = "form-control" })
         @Html.ValidationMessageFor(x => x.SellerName, "", new { @style = "color:red" })
         <br />
 
-        <label>Seller Surname</label>
+        <label>Client Surname</label>
         @Html.TextBoxFor(x => x.SellerSurname, new { @class = "form-control" })
         @Html.ValidationMessageFor(x => x.SellerSurname, "", new { @style = "color:red" })
         <br />
 
-        <label>Seller City</label>
+        <label>Client City</label>
         @Html.TextBoxFor(x => x.SellerCity, new { @class = "form-control" })
         <br />
 
-        <label>Seller Mail</label>
+        <label>Client Mail</label>
         @Html.TextBoxFor(x => x.SellerMail, new { @class = "form-control" })
         <br />
 
