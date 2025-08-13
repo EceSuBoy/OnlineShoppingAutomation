@@ -155,6 +155,8 @@
     <Compile Include="Models\Classes\Employee.cs" />
     <Compile Include="Models\Classes\Expense.cs" />
     <Compile Include="Models\Classes\GroupClass.cs" />
+    <Compile Include="Models\Classes\GroupClass2.cs" />
+    <Compile Include="Models\Classes\GroupClass3.cs" />
     <Compile Include="Models\Classes\InvoiceItem.cs" />
     <Compile Include="Models\Classes\Product.cs" />
     <Compile Include="Models\Classes\SalesLog.cs" />
@@ -2861,6 +2863,10 @@
     <Content Include="Views\Gallery\Index.cshtml" />
     <Content Include="Views\ProductDetail\Index.cshtml" />
     <Content Include="Views\Istatistics\SimpleTables.cshtml" />
+    <Content Include="Views\Istatistics\Partial1.cshtml" />
+    <Content Include="Views\Istatistics\Partial2.cshtml" />
+    <Content Include="Views\Istatistics\Partial3.cshtml" />
+    <Content Include="Views\Istatistics\Partial4.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

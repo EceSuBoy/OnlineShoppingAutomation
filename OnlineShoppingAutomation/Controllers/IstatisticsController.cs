@@ -94,7 +94,8 @@ namespace OnlineShoppingAutomation.Controllers
         }
         public ActionResult SimpleTables()
         {
-            var sorgu = from x in c.Sellers group x by x.SellerCity into g
+            var sorgu = from x in c.Sellers 
+                        group x by x.SellerCity into g
                         select new GroupClass
                         {
                             City = g.Key,
@@ -102,5 +103,39 @@ namespace OnlineShoppingAutomation.Controllers
                         };
             return View(sorgu.ToList());
         }
+        public PartialViewResult Partial1()
+        {
+            var sorgu2 = from x in c.Employees
+                        group x by x.Department.DepartmentName into g
+                        select new GroupClass2
+                        {
+                            Department = g.Key,
+                            Count = g.Count()
+                        };
+            return PartialView(sorgu2.ToList());
+        }
+        public PartialViewResult Partial2()
+        {
+            var sorgu = c.Sellers.ToList();
+            return PartialView(sorgu);
+        }
+
+        public PartialViewResult Partial3()
+        {
+            var sorgu = c.Products.ToList();
+            return PartialView(sorgu);
+        }
+        public PartialViewResult Partial4()
+        {
+            var sorgu3 = from x in c.Products
+                         group x by x.Brand into g
+                         select new GroupClass3
+                         {
+                             count = g.Count(),
+                             brand = g.Key
+                         };
+            return PartialView(sorgu3.ToList());
+        }
+
     }
 }
