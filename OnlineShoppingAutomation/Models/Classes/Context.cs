@@ -20,5 +20,6 @@ namespace OnlineShoppingAutomation.Models.Classes
         public DbSet<Employee> Employees { get; set; }
         public DbSet<SalesLog> SalesLogs { get; set; }
         public DbSet<Product> Products { get; set; }
+        public DbSet<Detail> Details { get; set; }
     }
 }

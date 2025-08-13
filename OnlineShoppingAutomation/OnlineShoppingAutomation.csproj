@@ -135,6 +135,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\IstatisticsController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Controllers\ProductDetailController.cs" />
     <Compile Include="Controllers\SalesController.cs" />
     <Compile Include="Controllers\SellerController.cs" />
     <Compile Include="Global.asax.cs">
@@ -150,12 +151,14 @@
     <Compile Include="Models\Classes\Category.cs" />
     <Compile Include="Models\Classes\Context.cs" />
     <Compile Include="Models\Classes\Department.cs" />
+    <Compile Include="Models\Classes\Detail.cs" />
     <Compile Include="Models\Classes\Employee.cs" />
     <Compile Include="Models\Classes\Expense.cs" />
     <Compile Include="Models\Classes\InvoiceItem.cs" />
     <Compile Include="Models\Classes\Product.cs" />
     <Compile Include="Models\Classes\SalesLog.cs" />
     <Compile Include="Models\Classes\Seller.cs" />
+    <Compile Include="Models\Classes\ValueClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -190,6 +193,10 @@
     <Content Include="AdminLTE-3.0.4\dist\css\alt\adminlte.plugins.css" />
     <Content Include="AdminLTE-3.0.4\dist\css\alt\adminlte.plugins.min.css" />
     <Content Include="AdminLTE-3.0.4\dist\img\AdminLTELogo.png" />
+    <Content Include="AdminLTE-3.0.4\dist\img\asusback.png" />
+    <Content Include="AdminLTE-3.0.4\dist\img\asusfront.png" />
+    <Content Include="AdminLTE-3.0.4\dist\img\asusfront1.png" />
+    <Content Include="AdminLTE-3.0.4\dist\img\asuskeyboard.png" />
     <Content Include="AdminLTE-3.0.4\dist\img\avatar.png" />
     <Content Include="AdminLTE-3.0.4\dist\img\avatar04.png" />
     <Content Include="AdminLTE-3.0.4\dist\img\avatar2.png" />
@@ -2851,6 +2858,7 @@
     <Content Include="thumber\scss\_site-blocks.scss" />
     <Content Include="thumber\scss\_site-navbar.scss" />
     <Content Include="Views\Gallery\Index.cshtml" />
+    <Content Include="Views\ProductDetail\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
