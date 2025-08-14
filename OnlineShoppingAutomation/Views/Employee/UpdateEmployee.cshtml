@@ -20,6 +20,14 @@
         @Html.TextBoxFor(x => x.EmployeeSurname, new { @class = "form-control" })
         <br />
 
+        <label>Employee Phone</label>
+        @Html.TextBoxFor(x => x.Phone, new { @class = "form-control" })
+        <br />
+
+        <label>Employee Mail</label>
+        @Html.TextBoxFor(x => x.Email, new { @class = "form-control" })
+        <br />
+
         <label>Employee Image</label>
         @Html.TextBoxFor(x => x.EmployeeImage, new { @class = "form-control" })
         <br />
@@ -27,6 +35,7 @@
         <label>Department</label>
         @Html.DropDownListFor(x => x.Departmentid, (List<SelectListItem>)ViewBag.dgr1, new { @class = "form-control" })
         <br />
+
 
         <button class="btn btn-default" style="background-color:khaki">Update</button>
     </div>

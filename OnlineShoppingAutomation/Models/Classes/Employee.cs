@@ -14,12 +14,16 @@ namespace OnlineShoppingAutomation.Models.Classes
         [Column(TypeName = "Varchar")]
         [StringLength(30)]
         public string EmployeeName { get; set; }
-        public string EmployeeSurname { get; set; }
         [Column(TypeName = "Varchar")]
         [StringLength(30)]
+        public string EmployeeSurname { get; set; }
+       
         public string EmployeeImage { get; set; }
         [Column(TypeName = "Varchar")]
         [StringLength(300)]
+
+        public string Phone { get; set; }
+        public string Email { get; set; }
 
         public ICollection<SalesLog> SalesLogs { get; set; }
         public int Departmentid { get; set; }

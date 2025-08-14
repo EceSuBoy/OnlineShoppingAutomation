@@ -21,5 +21,7 @@ namespace OnlineShoppingAutomation.Models.Classes
         public DbSet<SalesLog> SalesLogs { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<Detail> Details { get; set; }
+        public DbSet<ToDo> ToDos { get; set; }
+
     }
 }
