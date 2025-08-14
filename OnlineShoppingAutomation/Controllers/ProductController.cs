@@ -1,9 +1,10 @@
-﻿using System;
+﻿using OnlineShoppingAutomation.Models.Classes;
+using PagedList;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using OnlineShoppingAutomation.Models.Classes;
 
 namespace OnlineShoppingAutomation.Controllers
 {
@@ -11,9 +12,12 @@ namespace OnlineShoppingAutomation.Controllers
     {
         Context c = new Context();
         // GET: Product
-        public ActionResult Index()
+        public ActionResult Index(int page = 1)
         {
-            var urunler = c.Products.Where(x=>x.Status==true).ToList();
+            var urunler = c.Products
+                           .Where(x => x.Status == true)
+                           .OrderBy(x => x.ProductId)
+                           .ToPagedList(page, 7); // 5 items per page
             return View(urunler);
         }
         public ActionResult AddProduct()
