@@ -26,6 +26,9 @@ namespace OnlineShoppingAutomation.Models.Classes
         [StringLength(50)]
         public string SellerMail { get; set; }
 
+        [Column(TypeName = "Varchar")]
+        [StringLength(20)]
+        public string SellerPassword { get; set; }
         public bool Status { get; set; }
         public ICollection<SalesLog> SalesLogs { get; set; }
     }

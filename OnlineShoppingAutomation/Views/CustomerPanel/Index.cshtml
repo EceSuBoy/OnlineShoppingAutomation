@@ -1,0 +1,31 @@
+﻿@model OnlineShoppingAutomation.Models.Classes.Seller
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_CustomerLayout.cshtml";
+}
+
+<h2>Customer Info Panel</h2>
+
+@using (Html.BeginForm("Index2", "CustomerPanel", FormMethod.Post))
+{
+    <table class="table table-hovered">
+        <tr>
+            <td><label>Mail Address: @HttpContext.Current.User.Identity.Name</label></td>
+        </tr>
+        <tr>
+            <td><label>Customer Name: @Html.TextBoxFor(x => x.SellerName, new { @class = "Form-control" })</label></td>
+        </tr>
+        <tr>
+            <td><label>Customer Surname: @Html.TextBoxFor(x => x.SellerSurname, new { @class = "Form-control" })</label></td>
+        </tr>
+        <tr>
+            <td><label>Customer City: @Html.TextBoxFor(x => x.SellerCity, new { @class = "Form-control" })</label></td>
+
+        </tr>
+        <tr>
+            <td><label>Customer Password @Html.TextBoxFor(x => x.SellerPassword, new { @class = "Form-control" })</label></td>
+        </tr>
+
+    </table>
+    <button class="btn btn-warning">Update Info</button>
+}
